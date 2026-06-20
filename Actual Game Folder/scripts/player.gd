@@ -11,10 +11,14 @@ extends RigidBody2D
 # we can tweek these until the game feels fun
 const SPARKS_SCENE = preload("res://Actual Game Folder/scenes/components/sparks.tscn")
 
+
 @export var starting_spin_velocity:float = 30
 @export var default_velocity: float = 20
 @export var spin_velocity_drop_on_collision: float = 1
 @export var spin_velocity_drop_over_time: float = 1
+
+@onready var spin_bar: ProgressBar = $CanvasLayer/SpinBar
+
 
 var current_velocity: Vector2 = Vector2(0, 0)
 var spin_velocity: float = starting_spin_velocity
@@ -35,6 +39,8 @@ func _physics_process(delta: float) -> void:
 		spin_velocity = 0 # prevents slight backspin on player death
 	
 	current_velocity = Vector2(0, 0);
+
+	spin_bar.value = (spin_velocity / starting_spin_velocity) * 100.0
 
 	if Input.is_action_pressed("left"):
 		current_velocity[0] -= default_velocity;

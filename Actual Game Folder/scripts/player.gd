@@ -12,7 +12,7 @@ extends RigidBody2D
 @export var starting_spin_velocity:float = 30;
 
 
-var default_velocity: float = 200;
+var default_velocity: float = 20;
 var spin_velocity: float = starting_spin_velocity
 var player_died: bool = false
 
@@ -37,6 +37,6 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("down"):
 		current_velocity[1] += default_velocity;
 
-	apply_force(current_velocity)
+	apply_force(current_velocity * spin_velocity) #Just proprtional to spin velocity rn, some physics guy please make cleaner logic idk how beyblades work
 
 	pass

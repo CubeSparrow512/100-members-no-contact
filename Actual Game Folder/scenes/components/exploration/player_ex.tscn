@@ -389,6 +389,9 @@ size = Vector2(16, 21)
 [sub_resource type="CircleShape2D" id="CircleShape2D_tnv23"]
 radius = 22.355711
 
+[sub_resource type="LabelSettings" id="LabelSettings_5cf5f"]
+font_size = 8
+
 [node name="PlayerEx" type="Node2D" unique_id=300371094]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1208135547]
@@ -420,5 +423,13 @@ scale = Vector2(0.6666667, 0.6666667)
 
 [node name="DialogueBox" parent="CharacterBody2D/Camera2D/DialogueBox" index="2" unique_id=1503575011]
 visible = true
+
+[node name="Label" type="Label" parent="CharacterBody2D" unique_id=641539050]
+offset_left = -84.66667
+offset_top = 12.666667
+offset_right = 99.33333
+offset_bottom = 32.666668
+text = "What if I could roll too?(suggestion from K)"
+label_settings = SubResource("LabelSettings_5cf5f")
 
 [editable path="CharacterBody2D/Camera2D/DialogueBox"]

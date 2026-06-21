@@ -26,7 +26,7 @@ func stop_music():
 
 # get player separated so continuous SFX can be played/stopped by getting a player from other scripts
 func get_sfx_player(stream : AudioStream, position : Vector2) -> AudioStreamPlayer2D:
-    
+	
 	for sPlayer in sfxPlayerPool:
 		if !sPlayer.playing:
 			sPlayer.global_position = position

@@ -24,6 +24,10 @@ buses/default_bus_layout="uid://djgtwyo1isqmg"
 SceneManager="*uid://bwdblnajwfnkl"
 AudioManager="*uid://b3lg0jt8uws3p"
 
+[display]
+
+window/stretch/mode="canvas_items"
+
 [dotnet]
 
 project/assembly_name="100-members-no-contact"

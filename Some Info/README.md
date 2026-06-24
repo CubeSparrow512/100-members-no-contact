@@ -40,3 +40,23 @@ We're making a Beyblade roguelike/metroidvania deckbuilder RPG (Or Beyblade buil
 
   * https://wavstock.com/sound/25072/
   * Royalty-Free License
+
+* Racoon and Bird
+
+	* https://pixelfight.itch.io/birdcat
+	* CC0
+	
+* Pixel art top down basics
+
+	* https://cainos.itch.io/pixel-art-top-down-basic
+	* CC0
+	
+* Basic Caves & Dungeons Tileset 32x32 Pixels
+
+	* https://schwarnhild.itch.io/basic-caves-and-dungeons-tileset-32x32-pixels
+	* Royalty-Free Commercial License with Attribution
+	
+* House Interior
+
+	* https://graduation-cat.itch.io/house-interior-tileset-32x32
+	* Tier-Based Commercial License

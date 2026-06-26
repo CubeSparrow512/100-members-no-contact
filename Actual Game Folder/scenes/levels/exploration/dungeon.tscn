@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://xlpi2cckhk5j"]
 
+[ext_resource type="Script" uid="uid://p2fj2vo3ding" path="res://Actual Game Folder/scripts/exploration/dungeon.gd" id="1_fkrfe"]
 [ext_resource type="Texture2D" uid="uid://c42vj6tndoutg" path="res://Actual Game Folder/sprites/tilesets/TX Tileset Grass.png" id="1_glpnw"]
 [ext_resource type="Texture2D" uid="uid://cjca1w2rw504l" path="res://Actual Game Folder/sprites/tilesets/pixel-cyberpunk-interior.png" id="1_nio2f"]
 [ext_resource type="Texture2D" uid="uid://bqg0gmeuyd0yc" path="res://Actual Game Folder/sprites/tilesets/bridges.png" id="2_umxla"]
@@ -12,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://dhnxe1v4i63t3" path="res://Actual Game Folder/scenes/components/exploration/TombTombstone.tscn" id="8_umxla"]
 [ext_resource type="Texture2D" uid="uid://c6q5qk6vh6s0h" path="res://Miscellanious Assets Dump/Image/Dwayne-Johnson-PNG-Clipart-Background.png" id="10_2c7y0"]
 [ext_resource type="PackedScene" uid="uid://vieumik3lhr0" path="res://Actual Game Folder/scenes/components/exploration/enemy.tscn" id="11_y7gna"]
+[ext_resource type="PackedScene" uid="uid://cqjdtoavoh5wu" path="res://Actual Game Folder/scenes/components/exploration/seagull.tscn" id="13_0exe6"]
+[ext_resource type="AudioStream" uid="uid://42x3kber7b8b" path="res://Miscellanious Assets Dump/Audio/music/DungeonSong.mp3" id="15_fkhd6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_umxla"]
 texture = ExtResource("4_iem35")
@@ -1338,8 +1341,10 @@ sources/2 = SubResource("TileSetAtlasSource_oa20t")
 sources/5 = SubResource("TileSetAtlasSource_madj5")
 
 [node name="Dungeon" type="Node2D" unique_id=895076200]
+script = ExtResource("1_fkrfe")
 
 [node name="TileMap" type="Node2D" parent="." unique_id=1256657449]
+z_index = -1
 
 [node name="Detail" type="TileMapLayer" parent="TileMap" unique_id=1623316505]
 z_index = 2
@@ -1521,6 +1526,30 @@ dialogue = Array[String](["Here lays ImKrishnaLol (K)
 position = Vector2(-781, 0)
 dialogue = Array[String](["Here lays Berkant77", "(died at the beginning :c)"])
 
+[node name="Seagull" parent="." unique_id=1533098224 instance=ExtResource("13_0exe6")]
+position = Vector2(1104, 517)
+
+[node name="CharacterBody2D" parent="Seagull" index="0" unique_id=1226606288]
+dialogue = Array[String](["This prison of problems scares me off, 
+The darkness says I’m done.
+", "But the sunshine behind the bars,
+That comes from the sun,", "Tells me again and again,
+And it’s true I bet,", "It is not over yet.", "I know I am right,
+I can prove it easily.", "I must get my life again,
+I know I must rise again.", "By the fear of struggle, in a pit,
+Made of hopelessness, I’m bound.", "But from the heavens on the other side,
+I hear a silent sound.", "It gives me a feeling once again,
+That the whole world is with me,", "And I think I as well should be. ", "I might need to work so hard, 
+I will do it easily.", "I must get my life again,
+", "I know I must rise again.", "I read this poem in a book once.....", "I think it was titled \"Trinkets by Krishna Gupta\" 
+", "Available on Amazon in UK, USA and India"])
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=26004650]
+stream = ExtResource("15_fkhd6")
+volume_db = -4.0
+autoplay = true
+
 [editable path="CrackedWall"]
 [editable path="Enemy"]
 [editable path="Enemy2"]
+[editable path="Seagull"]
